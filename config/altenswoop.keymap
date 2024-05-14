@@ -191,9 +191,9 @@
         numbers {
             label = "num";
             bindings = <
-&kp ESC       &kp PG_UP      &kp UP     &kp LS(GT)  &kp GRAVE        &kp LS(TILDE)  &kp N1             &kp N2     &kp N3  &kp LG(LS(N4))
-&kp CAPSLOCK  &kp LEFT       &kp DOWN   &kp RIGHT   &kp LS(UNDER)    &kp EQUAL      &hm RGUI NUMBER_4  &kp N5     &kp N6  &kp LS(QMARK)
-&kp HOME      &kp PAGE_DOWN  &kp END    &kp LS(LT)  &kp MINUS        &kp LS(PLUS)   &kp N7             &kp N8     &kp N9  &kp N0
+&kp ESC       &kp PG_UP      &kp PAGE_DOWN     &kp LS(GT)  &kp GRAVE        &kp LS(TILDE)  &kp N1             &kp N2     &kp N3  &kp LG(LS(N4))
+&kp LEFT  &kp UP       &kp DOWN   &kp RIGHT   &kp LS(UNDER)    &kp EQUAL      &hm RGUI NUMBER_4  &kp N5     &kp N6  &kp LS(QMARK)
+&kp CAPSLOCK      &kp HOME  &kp END    &kp LS(LT)  &kp MINUS        &kp LS(PLUS)   &kp N7             &kp N8     &kp N9  &kp N0
                              &kp LG(X)  &trans      &kp LSHFT        &kp SPACE      &kp DEL            &kp LG(S)
             >;
 
@@ -210,6 +210,10 @@
 &kp C_BRIGHTNESS_DEC  &trans    &trans      &trans    &mkp MB4    &mkp MB5       &kp F9  &kp F10   &kp F11  &kp F12
                                 &kp K_MUTE  &trans    &trans      &trans         &trans  &kp C_PP
             >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp C_NEXT C_PREV>;
         };
 
         bluetooth {
