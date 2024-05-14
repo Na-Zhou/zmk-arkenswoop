@@ -210,8 +210,6 @@
 &kp C_BRIGHTNESS_DEC  &trans    &trans      &trans    &mkp MB4    &mkp MB5       &kp F9  &kp F10   &kp F11  &kp F12
                                 &kp K_MUTE  &trans    &trans      &trans         &trans  &kp C_PP
             >;
-
-            sensor-bindings = <&inc_dec_kp F24 F24>, <&inc_dec_kp F24 F24>;
         };
 
         bluetooth {
@@ -222,10 +220,6 @@
 &trans  &trans  &trans        &trans        &trans          &trans      &trans        &trans        &trans        &trans
                 &trans        &trans        &trans          &trans      &trans        &trans
             >;
-
-            sensor-bindings =
-                <&inc_dec_kp LG(RIGHT) LG(LEFT)>,
-                <&inc_dec_kp TAB LS(TAB)>;
         };
 
         numpad {
