@@ -122,6 +122,11 @@
             key-positions = <24 25>;
             require-prior-idle-ms = <170>;
         };
+
+        caps {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <10 19>;
+        };
     };
 
     macros {
