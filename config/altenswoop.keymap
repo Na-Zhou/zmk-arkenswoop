@@ -205,10 +205,10 @@
         Fn {
             label = "vol";
             bindings = <
-&kp LG(LC(Q))         &mkp MB1  &trans      &mkp MB2  &trans      &kp PG_UP      &kp F1  &kp F2    &kp F3   &kp F4
-&kp C_BRIGHTNESS_INC  &trans    &trans      &trans    &trans      &kp PAGE_DOWN  &kp F5  &kp F6    &kp F7   &kp F8
-&kp C_BRIGHTNESS_DEC  &trans    &trans      &trans    &mkp MB4    &mkp MB5       &kp F9  &kp F10   &kp F11  &kp F12
-                                &kp K_MUTE  &trans    &trans      &trans         &trans  &kp C_PP
+&kp LG(LC(Q))         &mkp MB1   &trans      &mkp MB2  &trans      &kp PG_UP      &kp F1  &kp F2    &kp F3   &kp F4
+&kp C_BRIGHTNESS_INC  &kp LCTRL  &kp LALT    &kp LGUI  &trans      &kp PAGE_DOWN  &kp F5  &kp F6    &kp F7   &kp F8
+&kp C_BRIGHTNESS_DEC  &trans     &trans      &trans    &mkp MB4    &mkp MB5       &kp F9  &kp F10   &kp F11  &kp F12
+                                 &kp K_MUTE  &trans    &trans      &trans         &trans  &kp C_PP
             >;
 
             sensor-bindings =
