@@ -69,7 +69,7 @@
         hm_ringfinger: hm_ringfinger {
             compatible = "zmk,behavior-hold-tap";
             label = "HM_RINGFINGER";
-            bindings = <&none>, <&none>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -219,10 +219,10 @@
         base {
             label = "Base";
             bindings = <
-&kp Q  &kp W        &kp E           &kp R            &kp T                    &kp Y      &kp U             &kp I            &kp O        &hl 3 P
-&kp A  &hm LCTRL S  &hm LEFT_ALT D  &hm LGUI F       &kp G                    &kp H      &hm RGUI J        &hm RIGHT_ALT K  &hm RCTRL L  &kp SEMICOLON
-&kp Z  &kp X        &kp C           &kp V            &kp B                    &kp N      &kp M             &kp COMMA        &kp DOT      &kp SQT
-                    &bootloader     &thumb_lt 1 TAB  &thumb_ht LSHFT ENTER    &kp SPACE  &thumb_lt 2 BSPC  &bootloader
+&kp Q  &kp W                   &kp E           &kp R            &kp T                    &kp Y      &kp U             &kp I            &kp O                   &hl 3 P
+&kp A  &hm_ringfinger LCTRL S  &hm LEFT_ALT D  &hm LGUI F       &kp G                    &kp H      &hm RGUI J        &hm RIGHT_ALT K  &hm_ringfinger RCTRL L  &kp SEMICOLON
+&kp Z  &kp X                   &kp C           &kp V            &kp B                    &kp N      &kp M             &kp COMMA        &kp DOT                 &kp SQT
+                               &bootloader     &thumb_lt 1 TAB  &thumb_ht LSHFT ENTER    &kp SPACE  &thumb_lt 2 BSPC  &bootloader
             >;
 
             sensor-bindings =
