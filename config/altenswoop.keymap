@@ -28,7 +28,7 @@
             label = "Home row layer mod tap/hold";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <170>;
+            tapping-term-ms = <500>;
             quick-tap-ms = <170>;
             require-prior-idle-ms = <170>;
             bindings = <&mo>, <&kp>;
