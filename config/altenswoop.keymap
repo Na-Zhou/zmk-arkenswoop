@@ -65,6 +65,18 @@
             tapping-term-ms = <150>;
             quick-tap-ms = <200>;
         };
+
+        hm_ringfinger: hm_ringfinger {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HM_RINGFINGER";
+            bindings = <&none>, <&none>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            require-prior-idle-ms = <170>;
+            quick-tap-ms = <170>;
+            flavor = "tap-preferred";
+        };
     };
 
     combos {
