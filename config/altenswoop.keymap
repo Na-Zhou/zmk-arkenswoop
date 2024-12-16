@@ -4,11 +4,12 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 / {
     behaviors {
@@ -222,35 +223,31 @@
 &kp Q  &kp W                   &kp E           &kp R            &kp T                    &kp Y      &kp U             &kp I            &kp O                   &hl 3 P
 &kp A  &hm_ringfinger LCTRL S  &hm LEFT_ALT D  &hm LGUI F       &kp G                    &kp H      &hm RGUI J        &hm RIGHT_ALT K  &hm_ringfinger RCTRL L  &kp SEMICOLON
 &kp Z  &kp X                   &kp C           &kp V            &kp B                    &kp N      &kp M             &kp COMMA        &kp DOT                 &kp SQT
-                               &bootloader     &thumb_lt 1 TAB  &thumb_ht LSHFT ENTER    &kp SPACE  &thumb_lt 2 BSPC  &bootloader
+                               &kp C_PLAY      &thumb_lt 1 TAB  &thumb_ht LSHFT ENTER    &kp SPACE  &thumb_lt 2 BSPC  &kp K_SLEEP
             >;
 
             sensor-bindings =
-                <&inc_dec_kp DOWN UP_ARROW>,
-                <&inc_dec_kp RIGHT LEFT>;
+                <&inc_dec_kp C_VOLUME_UP C_VOL_DN>,
+                <&inc_dec_kp C_PREVIOUS C_NEXT>;
         };
 
         numbers {
             label = "num";
             bindings = <
-&kp ESC         &kp PG_UP  &kp PAGE_DOWN  &kp LS(GT)      &kp GRAVE        &kp LS(TILDE)  &kp N1             &kp N2     &kp N3  &kp LG(LS(N4))
-&kp LEFT        &kp UP     &kp DOWN       &hm LGUI RIGHT  &kp LS(UNDER)    &kp EQUAL      &hm RGUI NUMBER_4  &kp N5     &kp N6  &kp LS(QMARK)
-&kp LEFT_SHIFT  &kp HOME   &kp END        &kp LS(LT)      &kp MINUS        &kp LS(PLUS)   &kp N7             &kp N8     &kp N9  &kp N0
-                           &kp LG(X)      &trans          &kp LSHFT        &kp SPACE      &kp DEL            &kp LG(S)
+&kp ESC         &kp PG_UP  &kp PAGE_DOWN  &kp LS(GT)      &kp GRAVE        &kp LS(TILDE)  &kp N1             &kp N2  &kp N3  &kp LG(LS(N4))
+&kp LEFT        &kp UP     &kp DOWN       &hm LGUI RIGHT  &kp MINUS        &kp EQUAL      &hm RGUI NUMBER_4  &kp N5  &kp N6  &kp LS(QMARK)
+&kp LEFT_SHIFT  &kp HOME   &kp END        &kp LS(LT)      &kp LS(MINUS)    &kp LS(PLUS)   &kp N7             &kp N8  &kp N9  &kp N0
+                           &trans         &trans          &kp LSHFT        &kp SPACE      &kp DEL            &trans
             >;
-
-            sensor-bindings =
-                <&inc_dec_kp RG(V) LG(C)>,
-                <&inc_dec_kp LG(LS(Z)) LG(Z)>;
         };
 
         Fn {
             label = "vol";
             bindings = <
-&kp LG(LC(Q))  &mkp MB1   &trans      &mkp MB2  &trans       &kp C_BRIGHTNESS_INC  &kp F1  &kp F2    &kp F3   &kp F4
-&trans         &kp LCTRL  &kp LALT    &kp LGUI  &trans       &kp C_BRIGHTNESS_DEC  &kp F5  &kp F6    &kp F7   &kp F8
-&trans         &kp TAB    &kp GRAVE   &trans    &mkp MB4     &mkp MB5              &kp F9  &kp F10   &kp F11  &kp F12
-                          &kp K_MUTE  &trans    &kp LSHFT    &trans                &trans  &kp C_PP
+&trans  &mkp MB1   &trans     &mkp MB2  &trans       &kp C_BRIGHTNESS_INC  &kp F1  &kp F2   &kp F3   &kp F4
+&trans  &kp LCTRL  &kp LALT   &kp LGUI  &trans       &kp C_BRIGHTNESS_DEC  &kp F5  &kp F6   &kp F7   &kp F8
+&trans  &kp TAB    &kp GRAVE  &trans    &mkp MB4     &mkp MB5              &kp F9  &kp F10  &kp F11  &kp F12
+                   &trans     &trans    &kp LSHFT    &trans                &trans  &trans
             >;
 
             sensor-bindings =
@@ -266,18 +263,6 @@
 &trans  &trans  &trans        &trans        &trans          &trans      &trans        &trans        &trans        &trans
                 &trans        &trans        &trans          &trans      &trans        &trans
             >;
-        };
-
-        numpad {
-            bindings = <
-&none  &none  &none  &kp K      &none     &kp DOT       &kp N7  &kp N8  &kp N9  &kp STAR
-&none  &none  &none  &kp J      &none     &kp MINUS     &kp N4  &kp N5  &kp N6  &kp PLUS
-&none  &none  &none  &none      &none     &kp NUMBER_0  &kp N1  &kp N2  &kp N3  &kp FSLH
-              &none  &kp LS(G)  &trans    &trans        &trans  &none
-            >;
-
-            label = "NUM";
-            sensor-bindings = <&inc_dec_kp F24 F24>, <&inc_dec_kp F15 F14>;
         };
     };
 };
