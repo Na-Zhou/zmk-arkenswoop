@@ -120,13 +120,13 @@
 
         bac {
             bindings = <&kp BACKSLASH>;
-            key-positions = <4 5>;
+            key-positions = <4 15>;
             require-prior-idle-ms = <170>;
         };
 
         slash {
             bindings = <&kp SLASH>;
-            key-positions = <14 15>;
+            key-positions = <14 5>;
             require-prior-idle-ms = <170>;
         };
 
