@@ -28,6 +28,7 @@ config SSD1306
 config SSD1306_REVERSE_MODE
 	bool
 	default y
+	depends on ZMK_DISPLAY
 
 endif # ZMK_DISPLAY
 
@@ -39,6 +40,7 @@ config LV_Z_VDB_SIZE
 config LV_Z_DPI
 	int
 	default 148
+	depends on LVGL
 
 config LV_Z_BITS_PER_PIXEL
 	default 1
